@@ -1,0 +1,8 @@
+{% extends 'bootstrap_4_horizontal_layout.html.twig' %}
+
+{% block file_row -%}
+    <div class="row form-group">
+        <div class="col-md-2"><label for="{{- name -}}">{{ label }}</label></div>
+        <div class="col-md-10"><input type="file" {{ block('widget_attributes') }}> </div>
+    </div>
+{%- endblock file_row %}

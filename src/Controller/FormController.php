@@ -17,4 +17,13 @@ class FormController extends Controller
 //        $form->add('submit', SubmitType::class);
         return $this->render('form/index.html.twig', ['form' => $form->createView()]);
     }
+    /**
+     * @Route("/form-updated", name="form")
+     */
+    public function form2()
+    {
+        $form = $this->createForm(ApplicationType::class);
+//        $form->add('submit', SubmitType::class);
+        return $this->render('form/form2.html.twig', ['form' => $form->createView()]);
+    }
 }
